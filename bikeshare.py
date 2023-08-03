@@ -1,8 +1,12 @@
 import time
 import pandas as pd
 import numpy as np
+<<<<<<< HEAD
 import date
 """ Project3 github """
+=======
+"""Project 03 - 4h40PM 02 August 2023 """
+>>>>>>> refactoring
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -45,19 +49,16 @@ def load_data(city, month, day):
 
     return df
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+     """Displays statistics on the most popular stations and trip."""
 
-    print('\nCalculating The Most Frequent Times of Travel...\n')
+    print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
-
-    # display the most common month
-
-
-    # display the most common day of week
-
-
-    # display the most common start hour
-
+    # TO DO: display most commonly used start station
+    print("The most common start station is: ", df ['Start Station'].value_counts().idxmax())
+    # TO DO: display most commonly used end station
+    print("The most common end station is: ", df['End Station'].value_counts().idxmax())
+    # TO DO: display most frequent combination of start station and end station trip
+    print("The most frequent combination of start station and end station trip")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)

@@ -28,7 +28,19 @@ def get_filters():
 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
+    if month != 'all':
+        months = ['january', 'february', 'march', 'april', 'may', 'june']
+        month = months.index(month) + 1
+        # filter by month to create the new dataframe
+        df = df[df['month'] == month]
+       
 
+    
+    # filter by day of week if applicable
+    if day != 'all':
+        # filter by day of week to create the new dataframe
+        df = df[df['day_of_week'] == day.title()]
+    return df
 
     print('-'*40)
     return city, month, day
@@ -50,15 +62,18 @@ def load_data(city, month, day):
     return df
 def time_stats(df):
      """Displays statistics on the most popular stations and trip."""
-
+    
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
     # TO DO: display most commonly used start station
     print("The most common start station is: ", df ['Start Station'].value_counts().idxmax())
+
     # TO DO: display most commonly used end station
     print("The most common end station is: ", df['End Station'].value_counts().idxmax())
+    
     # TO DO: display most frequent combination of start station and end station trip
     print("The most frequent combination of start station and end station trip")
+   
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)

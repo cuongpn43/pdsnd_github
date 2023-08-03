@@ -2,9 +2,9 @@
 
 ### Date created
 Include the date you created this project and README file.
-02-08-2023
+03-08-2023
 ### Project Title
-Bike Share Data
+Bike Share Data - git command
 ### Description
 To answer these questions using Python, you will need to write a Python script. 
 To help guide your work in this project, a template with helper code and comments is provided in a bikeshare.py file, and you will do your scripting in there also. 

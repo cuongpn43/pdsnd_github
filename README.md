@@ -2,16 +2,26 @@
 
 ### Date created
 Include the date you created this project and README file.
-03-08-2023
+04-08-2023
 ### Project Title
 Bike Share Data - git command
 ### Description
 To answer these questions using Python, you will need to write a Python script. 
 To help guide your work in this project, a template with helper code and comments is provided in a bikeshare.py file, and you will do your scripting in there also. 
 You will need the three city dataset files too:
-chicago.csv
-new_york_city.csv
-washington.csv
++chicago.csv
++new_york_city.csv
++washington.csv
+
+Details Funciton
+1. Asks user to specify a city, month, and day to analyze.
+    Returns:
+        (str) city - name of the city to analyze
+2.  Loads data for the specified city and filters by month and day if applicable.
+    Args:
+        (str) city - name of the city to analyze
+    Returns:
+        df - Pandas DataFrame containing city data filtered by month and day
 
 ### Files used
 Include the files used

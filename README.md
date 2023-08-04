@@ -2,15 +2,13 @@
 
 ### Date created
 Include the date you created this project and README file.
-03-08 11h28 PM
+04-08 
 ### Project Title
 Replace the Project Title
 Project GITHUB
 ### Description
-Describe what your project is about and what it does
-Readme file 
-Washington.csv
-NewYork.csv
+Displays statistics on the most popular stations and trip.
+Displays statistics on the total and average trip duration.
 ### Files used
 Include the files used
 

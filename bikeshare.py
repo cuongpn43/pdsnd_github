@@ -28,6 +28,7 @@ def get_filters():
 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
+<<<<<<< HEAD
     if month != 'all':
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
@@ -41,6 +42,9 @@ def get_filters():
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week'] == day.title()]
     return df
+=======
+    
+>>>>>>> documentation
 
     print('-'*40)
     return city, month, day
@@ -57,7 +61,12 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-
+     #Add new column months extract month from Start Time 
+    df['month'] = df['Start Time'].dt.month
+    # Add new column day_of_week extract day from Start Time
+    df['day_of_week'] =pd.to_datetime(df['Start Time']).dt.day_name()
+    # Add new column hour extract day from Start Time
+    df['hour'] = df['Start Time'].dt.hour
 
     return df
 def time_stats(df):

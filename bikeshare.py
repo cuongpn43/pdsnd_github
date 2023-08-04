@@ -79,14 +79,23 @@ def station_stats(df):
     print('-'*40)
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
-
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
+    total_duration = df['Trip Duration'].sum() / 3600.0
+    print("Total trip duration:", total_duration)
+    # Calculate the average trip duration
+    average_duration = df['Trip Duration'].mean() / 3600.0
+    print("Average trip duration:", average_duration)
 
-    # display total travel time
-
-
-    # display mean travel time
+    # TO DO: display total travel time
+    # TO DO: display mean travel time
+      
+    seconds = int((time.time() - start_time))
+    minutes = seconds // 60
+    hours = minutes // 60
+    remaining_minutes = minutes % 60
+    remaining_seconds = seconds % 60
+    print("\nThis took %s seconds." % (time.time() - start_time))
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -98,6 +107,25 @@ def user_stats(df):
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
+    
+    print('\nCalculating User Stats...\n')
+    start_time = time.time()
+    user_counts = df['User Type'].value_counts()
+
+    # Calculate the percentage of users by user type
+    user_percentages = df['User Type'].value_counts(normalize=True) * 100
+
+    # Print the results
+    print("User counts:")
+    print(user_counts)
+    print("\nUser percentages:")
+    print(user_percentages)
+    # Count the number of individuals by gender
+    gender_counts = df['Gender'].value_counts()
+
+    # Print the results
+    print("Gender counts:")
+    print(gender_counts)
 
     # Display counts of user types
 

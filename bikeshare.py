@@ -137,7 +137,21 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+def line_data(df):
+    start = 0
+    end  = 5
+    df_line= len(df.index)
+    while start < df_line:
+        line_data = input("\nWould you like to see data? Enter 'yes' or 'no'.\n")
+        if line_data.lower() == 'yes':
+            print("\nDisplaying only 5 line of data.\n")
+            if end > df_line:
+                end = df_line
+            print(df.iloc[start:end])
+            start += 5
+            end += 5
+        else:
+            break
 def main():
     while True:
         city, month, day = get_filters()
